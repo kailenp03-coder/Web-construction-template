@@ -1,0 +1,1258 @@
+:root {
+  --primary: #e65c00; /* darker orange */
+  --dark: #0b0b0b;
+  --light: #f4f4f4;
+  --text: #1e1e1e;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  width: min(1100px, 90%);
+  margin: auto;
+}
+
+.section { padding: 4rem 0; }
+.section.alt { background: var(--light); }
+.section.dark { background: var(--dark); color: #fff; }
+
+/* NAV */
+.nav {
+  background: #fff;
+  border-bottom: 3px solid var(--primary);
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo span { color: var(--primary); }
+
+nav a {
+  margin-left: 1.2rem;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* HERO */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* BUTTONS */
+.btn {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.75rem 1.4rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn.outline {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.btn.small { padding: 0.4rem 0.9rem; }
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.actions.center { justify-content: center; }
+
+.trust span {
+  margin-right: 1rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* SERVICES */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.service-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.service-card h3,
+.service-card p {
+  padding: 1rem;
+}
+
+/* TEAM */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.team-card {
+  background: #fff;
+  border-left: 4px solid var(--primary);
+  padding: 1.5rem;
+}
+
+.team-card .role {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* REVIEWS */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.review-card {
+  background: #111;
+  border: 1px solid #222;
+  padding: 1.5rem;
+  border-radius: 6px;
+}
+
+.stars {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.reviewer {
+  display: block;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* CTA */
+.cta {
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+
+/* FOOTER */
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 2.5rem 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 2rem;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .actions { flex-direction: column; }
+}
+
+/* AREAS */
+#areas {
+  background: #000;
+  color: #fff;
+}
+
+#areas h2,
+#areas p {
+  color: #fff;
+}
+
+.areas-list {
+  columns: 3;
+  margin-top: 1.5rem;
+}
+
+.areas-list li {
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* GUARANTEES */
+.guarantees-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.guarantee {
+  background: #fff;
+  border-left: 4px solid var(--primary);
+  padding: 1.5rem;
+}
+
+/* FAQ */
+#faq {
+  background: #fff;
+  color: #fff;
+}
+
+#faq h2 {
+  color: #000;
+}
+
+.faq-list {
+  max-width: 800px;
+  margin-top: 2rem;
+}
+
+.faq-list details {
+  background: #0f0f0f;
+  border: 1px solid #222;
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.faq-list summary {
+  font-weight: 600;
+  color: #fff;
+  list-style: none;
+  cursor: pointer;
+}
+
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-list details p {
+  margin-top: 0.8rem;
+  color: #fff;
+  opacity: 0.9;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .areas-list {
+    columns: 2;
+  }
+}
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  z-index: 999;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+/* Optional: only show on mobile */
+@media (min-width: 769px) {
+  .whatsapp-float {
+    display: none;
+  }
+}
+
+/* ===== PREMIUM HERO ===== */
+
+.hero-premium {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  background: #0c0c0c;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      600px 400px at 30% 20%,
+      rgba(255, 140, 0, 0.35),
+      transparent 60%
+    ),
+    radial-gradient(
+      500px 300px at 70% 60%,
+      rgba(255, 100, 0, 0.25),
+      transparent 65%
+    ),
+    linear-gradient(180deg, #0b0b0b, #000);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+}
+
+.hero-pill {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ff8c00;
+  background: rgba(255, 140, 0, 0.12);
+  border: 1px solid rgba(255, 140, 0, 0.3);
+  border-radius: 999px;
+}
+
+.hero-premium h1 {
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+
+.hero-sub {
+  max-width: 620px;
+  font-size: 1.15rem;
+  color: #d0d0d0;
+  margin-bottom: 34px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.hero-trust {
+  display: flex;
+  gap: 22px;
+  font-size: 0.95rem;
+  color: #bdbdbd;
+  flex-wrap: wrap;
+}
+
+/* Buttons (if not already defined) */
+.btn.primary {
+  background: linear-gradient(135deg, #ff8c00, #ff6a00);
+  color: #000;
+  padding: 14px 26px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 14px 26px;
+  border-radius: 10px;
+}
+
+/* ===== PREMIUM SERVICES ===== */
+
+.services-premium {
+  position: relative;
+  padding: 120px 0;
+  background: #f6f6f6;
+  overflow: hidden;
+}
+
+.services-bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 340px;
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.45),
+      rgba(0,0,0,0.45)
+    ),
+    url("https://images.unsplash.com/photo-1503387762-592deb58ef4e");
+  background-size: cover;
+  background-position: center;
+  border-radius: 28px;
+  z-index: 0;
+}
+
+.services-premium .container {
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  margin-bottom: 60px;
+  color: #111;
+}
+
+/* Cards layout */
+.services-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  margin-top: -140px;
+}
+
+/* Individual card */
+.service-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 42px 28px 34px;
+  text-align: center;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.18);
+}
+
+/* Icon badge */
+.service-icon {
+  width: 52px;
+  height: 52px;
+  background: #000;
+  color: #ff8c00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  margin: 0 auto 20px;
+  font-size: 22px;
+}
+
+.service-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.service-more {
+  display: inline-block;
+  margin-top: 18px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #ff8c00;
+  text-transform: uppercase;
+}
+
+/* ===== SERVICES SHOWCASE (MATCHES REFERENCE) ===== */
+
+.services-showcase {
+  position: relative;
+  padding: 140px 0 120px;
+  background: #f4f4f4;
+}
+
+.services-image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
+  height: 360px;
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("https://images.unsplash.com/photo-1503387762-592deb58ef4e");
+  background-size: cover;
+  background-position: center;
+  border-radius: 26px;
+  z-index: 0;
+}
+
+.services-showcase .container {
+  position: relative;
+  z-index: 1;
+}
+
+.services-title {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  margin-bottom: 70px;
+  color: #111;
+}
+
+/* Cards layout */
+.services-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  margin-top: -150px;
+}
+
+/* Card styling */
+.service-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 44px 30px 36px;
+  text-align: center;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 45px 90px rgba(0,0,0,0.2);
+}
+
+/* Icon badge */
+.service-icon {
+  width: 56px;
+  height: 56px;
+  background: #000;
+  color: #ff8c00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  margin: 0 auto 22px;
+  font-size: 22px;
+}
+
+.service-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 14px;
+  color: #111;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.service-more {
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #ff8c00;
+  text-transform: uppercase;
+}
+
+/* Space between hero and services */
+.hero-premium + .services-showcase {
+  margin-top: 80px;
+}
+
+@media (max-width: 768px) {
+  .hero-premium + .services-showcase {
+    margin-top: 60px;
+  }
+}
+
+/* ===== SERVICES STAGGER REVEAL ===== */
+
+.service-card {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.service-card.reveal-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== WHY CHOOSE US (HEX GRID) ===== */
+
+.why-us-section {
+  padding: 120px 0;
+  background: #fafafa;
+}
+
+.why-intro {
+  max-width: 640px;
+  margin: -30px auto 90px;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Auto-balancing centered grid */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px 34px;
+  justify-items: center;
+}
+
+/* Hex card */
+.why-card {
+  width: 260px;
+  background: #fff;
+  padding: 46px 26px;
+  text-align: center;
+
+  clip-path: polygon(
+    25% 6%,
+    75% 6%,
+    100% 50%,
+    75% 94%,
+    25% 94%,
+    0% 50%
+  );
+
+  box-shadow: 0 22px 50px rgba(0,0,0,0.12);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.why-card.reveal-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover glow effect */
+.why-card:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 40px 90px rgba(0,0,0,0.18),
+    0 0 0 2px rgba(255, 140, 0, 0.25),
+    0 0 40px rgba(255, 140, 0, 0.25);
+}
+
+/* Icon glow */
+.why-card:hover .why-icon {
+  background: rgba(255, 140, 0, 0.25);
+  box-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
+}
+.why-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 40px 90px rgba(0,0,0,0.18);
+}
+
+/* Icon badge */
+.why-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(255,140,0,0.15);
+  color: #ff8c00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 18px;
+  font-size: 24px;
+}
+
+.why-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.why-card p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.55;
+}
+
+/* =====================================================
+   WHY CHOOSE US – FINAL HEX LAYOUT (OVERRIDES ALL)
+===================================================== */
+
+.why-us-section {
+  padding: 120px 0;
+  background: #fafafa;
+}
+
+.why-us-section .section-title {
+  text-align: center;
+}
+
+.why-intro {
+  max-width: 640px;
+  margin: 20px auto 90px;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* CENTERED AUTO-BALANCING GRID */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 260px));
+  justify-content: center;
+  gap: 42px 36px;
+}
+
+/* HEX CARD */
+.why-card {
+  width: 260px;
+  background: #fff;
+  padding: 48px 28px;
+  text-align: center;
+
+  clip-path: polygon(
+    25% 6%,
+    75% 6%,
+    100% 50%,
+    75% 94%,
+    25% 94%,
+    0% 50%
+  );
+
+  box-shadow: 0 24px 55px rgba(0,0,0,0.12);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+/* REVEAL */
+.why-card.reveal-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* HOVER GLOW */
+.why-card:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 40px 90px rgba(0,0,0,0.18),
+    0 0 0 2px rgba(230, 92, 0, 0.35),
+    0 0 45px rgba(230, 92, 0, 0.35);
+}
+
+/* ICON */
+.why-icon {
+  width: 58px;
+  height: 58px;
+  background: rgba(230, 92, 0, 0.15);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 18px;
+  font-size: 24px;
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.why-card:hover .why-icon {
+  background: rgba(230, 92, 0, 0.25);
+  box-shadow: 0 0 22px rgba(230, 92, 0, 0.6);
+}
+
+/* TEXT */
+.why-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.why-card p {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #555;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .why-grid {
+    gap: 36px;
+  }
+}
+
+/* =====================================================
+   WHY CHOOSE US — HARD OVERRIDE (FINAL)
+   This forces hex layout no matter what
+===================================================== */
+
+#why-us .why-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 260px)) !important;
+  justify-content: center !important;
+  gap: 44px 36px !important;
+  margin-top: 60px !important;
+}
+
+#why-us .why-card {
+  width: 260px !important;
+  background: #fff !important;
+  padding: 48px 28px !important;
+  text-align: center !important;
+
+  clip-path: polygon(
+    25% 6%,
+    75% 6%,
+    100% 50%,
+    75% 94%,
+    25% 94%,
+    0% 50%
+  ) !important;
+
+  box-shadow: 0 24px 55px rgba(0,0,0,0.12) !important;
+
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+#why-us .why-icon {
+  width: 58px !important;
+  height: 58px !important;
+  background: rgba(230, 92, 0, 0.15) !important;
+  color: #e65c00 !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  border-radius: 50% !important;
+  margin: 0 auto 18px !important;
+  font-size: 24px !important;
+}
+
+#why-us .why-card h3 {
+  font-size: 1.05rem !important;
+  margin-bottom: 10px !important;
+  color: #111 !important;
+}
+
+#why-us .why-card p {
+  font-size: 0.9rem !important;
+  line-height: 1.55 !important;
+  color: #555 !important;
+}
+
+/* Hover glow */
+#why-us .why-card:hover {
+  transform: translateY(-10px) !important;
+  box-shadow:
+    0 40px 90px rgba(0,0,0,0.18),
+    0 0 0 2px rgba(230, 92, 0, 0.35),
+    0 0 45px rgba(230, 92, 0, 0.35) !important;
+}
+
+#why-us .why-card:hover .why-icon {
+  background: rgba(230, 92, 0, 0.25) !important;
+  box-shadow: 0 0 22px rgba(230, 92, 0, 0.6) !important;
+}
+
+/* =====================================================
+   WHY CHOOSE US – HARD RESET & HEX GRID (FINAL)
+   This block OVERRIDES all previous styles
+===================================================== */
+
+#why-us {
+  padding: 120px 0;
+  background: #fafafa;
+}
+
+#why-us .section-title {
+  text-align: center;
+}
+
+#why-us .why-intro {
+  max-width: 640px;
+  margin: 20px auto 80px;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* FORCE GRID (no flex, no lists, no columns) */
+#why-us .why-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, 260px) !important;
+  justify-content: center !important;
+  gap: 42px !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
+}
+
+/* REMOVE ANY LIST BEHAVIOUR */
+#why-us .why-grid * {
+  list-style: none !important;
+}
+
+/* HEX CARD */
+#why-us .why-card {
+  width: 260px !important;
+  background: #fff !important;
+  padding: 48px 28px !important;
+  text-align: center !important;
+
+  clip-path: polygon(
+    25% 6%,
+    75% 6%,
+    100% 50%,
+    75% 94%,
+    25% 94%,
+    0% 50%
+  ) !important;
+
+  box-shadow: 0 24px 55px rgba(0,0,0,0.12) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+/* ICON */
+#why-us .why-icon {
+  width: 58px !important;
+  height: 58px !important;
+  margin: 0 auto 18px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  border-radius: 50% !important;
+  font-size: 24px !important;
+
+  background: rgba(255,140,0,0.15) !important;
+  color: #ff8c00 !important;
+}
+
+/* TEXT */
+#why-us .why-card h3 {
+  font-size: 1.05rem !important;
+  margin-bottom: 10px !important;
+  color: #111 !important;
+}
+
+#why-us .why-card p {
+  font-size: 0.9rem !important;
+  line-height: 1.55 !important;
+  color: #555 !important;
+}
+
+/* HOVER GLOW */
+#why-us .why-card:hover {
+  transform: translateY(-10px) !important;
+  box-shadow:
+    0 40px 90px rgba(0,0,0,0.18),
+    0 0 0 2px rgba(255,140,0,0.35),
+    0 0 45px rgba(255,140,0,0.35) !important;
+}
+
+#why-us .why-card:hover .why-icon {
+  background: rgba(255,140,0,0.25) !important;
+  box-shadow: 0 0 22px rgba(255,140,0,0.6) !important;
+}
+
+/* =====================================================
+   PREMIUM FAQ SECTION
+===================================================== */
+
+.faq-premium {
+  padding: 140px 0;
+  background: linear-gradient(180deg, #0e1621, #0b121b);
+  color: #fff;
+}
+
+.faq-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+@media (max-width: 900px) {
+  .faq-layout {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}
+
+/* LEFT SIDE */
+.faq-left h2 {
+  font-size: clamp(2.2rem, 4vw, 2.8rem);
+  margin-bottom: 18px;
+}
+
+.faq-left p {
+  max-width: 420px;
+  color: #b6c0cc;
+  line-height: 1.6;
+}
+
+/* RIGHT SIDE (ACCORDION) */
+.faq-right {
+  background: rgba(255,255,255,0.04);
+  border-radius: 18px;
+  padding: 30px 34px;
+}
+
+/* SINGLE ITEM */
+.faq-item {
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 22px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #eaeef3;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+}
+
+.faq-question span {
+  flex: 1;
+}
+
+/* ICON */
+.faq-icon {
+  color: var(--primary);
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+/* ANSWER */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.faq-answer p {
+  color: #b6c0cc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding-bottom: 22px;
+}
+
+/* ACTIVE STATE */
+.faq-item.active .faq-answer {
+  max-height: 300px;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+/* =====================================================
+   FAQ TEXT CONTRAST FIX
+===================================================== */
+
+/* Section base */
+.faq-premium {
+  color: #e6edf5;
+}
+
+/* Left side text */
+.faq-left h2 {
+  color: #ffffff;
+}
+
+.faq-left p {
+  color: #c7d2de;
+}
+
+/* Question text */
+.faq-question {
+  color: #f1f5f9;
+}
+
+.faq-question span:first-child {
+  color: #f1f5f9;
+}
+
+/* Answer text */
+.faq-answer p {
+  color: #cbd5e1;
+}
+
+/* Divider lines */
+.faq-item {
+  border-bottom: 1px solid rgba(255,255,255,0.18);
+}
+
+/* Accordion container */
+.faq-right {
+  background: rgba(255,255,255,0.06);
+}
+
+/* =====================================================
+   FAQ – HARD TEXT COLOR OVERRIDE (FINAL)
+===================================================== */
+
+#faq,
+#faq * {
+  color: #e6edf5 !important;
+}
+
+/* Title */
+#faq h2 {
+  color: #ffffff !important;
+}
+
+/* Left intro text */
+#faq .faq-left p {
+  color: #cbd5e1 !important;
+}
+
+/* Question text */
+#faq .faq-question,
+#faq .faq-question span {
+  color: #f8fafc !important;
+}
+
+/* Answer text */
+#faq .faq-answer p {
+  color: #d1dae6 !important;
+}
+
+/* Divider lines */
+#faq .faq-item {
+  border-bottom: 1px solid rgba(255,255,255,0.2) !important;
+}
+
+/* Accordion panel */
+#faq .faq-right {
+  background: rgba(255,255,255,0.06) !important;
+}
+
+/* =====================================================
+   FAQ – FINAL COLOR BALANCE FIX
+===================================================== */
+
+/* Ensure dark background stays */
+#faq {
+  background: linear-gradient(180deg, #0e1621, #0b121b) !important;
+}
+
+/* Left column */
+#faq .faq-left h2 {
+  color: #ffffff !important;
+}
+
+#faq .faq-left p {
+  color: #c7d2de !important;
+}
+
+/* Accordion container */
+#faq .faq-right {
+  background: rgba(255,255,255,0.06) !important;
+}
+
+/* Questions */
+#faq .faq-question {
+  color: #f1f5f9 !important;
+}
+
+/* Answers */
+#faq .faq-answer p {
+  color: #d1dae6 !important;
+}
+
+/* Dividers */
+#faq .faq-item {
+  border-bottom: 1px solid rgba(255,255,255,0.18) !important;
+}
+
+/* Icons */
+#faq .faq-icon {
+  color: var(--primary) !important;
+}
+
+/* =====================================================
+   FAQ – MEDIUM DARK GREY BACKGROUND
+===================================================== */
+
+#faq {
+  background: linear-gradient(
+    180deg,
+    #1c1f24,
+    #16191d
+  ) !important;
+}
+
+/* =====================================================
+   SERVICES – BIGGER BACKGROUND IMAGE
+===================================================== */
+
+.services-showcase {
+  padding-top: 200px;   /* more space above cards */
+  padding-bottom: 140px;
+}
+
+.services-image {
+  height: 840px;        /* was ~360px before */
+  width: 96%;
+  border-radius: 32px;
+}
+
+/* Mobile tweak */
+@media (max-width: 768px) {
+  .services-showcase {
+    padding-top: 160px;
+  }
+
+  .services-image {
+    height: 420px;
+    width: 94%;
+  }
+}
