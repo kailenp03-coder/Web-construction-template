@@ -217,3 +217,13 @@ async function initSite() {
 }
 
 document.addEventListener("DOMContentLoaded", initSite);
+
+// Mobile hamburger menu
+const hamburger = document.querySelector(".hamburger");
+const header = document.querySelector("header");
+
+if (hamburger) {
+  hamburger.addEventListener("click", () => {
+    header.classList.toggle("menu-open");
+  });
+}
