@@ -16,15 +16,35 @@
 <body>
 
 <!-- NAV -->
-<header class="nav">
-  <div class="container nav-inner">
+<header>
+  <div class="nav-container">
+
     <div class="logo" data-text="business_name"></div>
-    <nav>
+
+    <!-- Desktop nav -->
+    <nav class="nav-links">
       <a href="#services">Services</a>
       <a href="#team">Team</a>
-      <a href="#testimonials">Reviews</a>
-      <a href="#contact" class="btn small" data-phone>Call Now</a>
+      <a href="#reviews">Reviews</a>
     </nav>
+
+    <!-- Phone CTA -->
+    <a href="tel:0824567890" class="header-phone">082 456 7890</a>
+
+    <!-- Hamburger button (mobile only) -->
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu">
+    <a href="#services">Services</a>
+    <a href="#team">Team</a>
+    <a href="#reviews">Reviews</a>
   </div>
 </header>
 
