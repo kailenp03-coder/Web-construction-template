@@ -1570,6 +1570,63 @@ header.menu-open .hamburger span:nth-child(3) {
 }
 
 /* =====================================================
+   DESKTOP HEADER – RESTORE LAYOUT
+===================================================== */
+
+header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* Desktop nav links */
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: #111;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #ff8c00;
+}
+
+/* Desktop phone CTA */
+.header-phone {
+  background: #ff8c00;
+  color: #000;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Hide hamburger on desktop */
+.hamburger {
+  display: none;
+}
+
+/* =====================================================
    MOBILE HEADER – FINAL POLISH
 ===================================================== */
 
