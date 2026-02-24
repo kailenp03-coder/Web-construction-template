@@ -1568,3 +1568,21 @@ header.menu-open .hamburger span:nth-child(3) {
     top: 9px;
   }
 }
+
+/* =====================================================
+   MOBILE HEADER – FINAL POLISH
+===================================================== */
+
+@media (max-width: 768px) {
+
+  /* Remove phone number from header on mobile */
+  .header-phone {
+    display: none !important;
+  }
+
+  /* Right-indent / align company name */
+  .logo {
+    padding-left: 4px; /* subtle right indent */
+  }
+
+}
